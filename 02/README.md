@@ -4,7 +4,25 @@
 
 # `#02` Python: Programowanie obiektowe
 
-Tutaj treść
+## Metody – System rejestracji użytkowników  
+
+Twoim zadaniem jest **dodać metodę** do klasy `User`, która zwróci informacje o użytkowniku.  
+
+📌 **Instrukcja:**  
+1. Otwórz plik `user_management.py` i edytuj wcześniej stworzoną klasę `User`.  
+2. Dodaj metodę `get_info()`, która zwróci tekst w formacie:  
+   ```
+   "Użytkownik: {username}, e-mail: {email}"
+   ```  
+3. Wywołaj tę metodę dla wcześniej utworzonych użytkowników i wypisz wynik.  
+
+> **⭐ Podpowiedź:** Metoda powinna zwracać wartość (`return`), a nie tylko ją wypisywać.  
+
+📌 **Przykładowe wywołanie:**  
+```python
+print(user1.get_info())  # Oczekiwany wynik: "Użytkownik: jan_kowalski, e-mail: jan@example.com"
+print(user2.get_info())  # Oczekiwany wynik: "Użytkownik: anna_nowak, e-mail: anna@example.com"
+```  
 
 
 &nbsp;

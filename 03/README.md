@@ -5,7 +5,25 @@
 # `#03` Python: Podstawy
 
 
-Tutaj treść
+## Magiczne metody – Reprezentacja obiektu użytkownika
+
+Twoim zadaniem jest **nadpisać metodę `__str__`**, aby obiekt klasy `User` był czytelnie reprezentowany w postaci tekstowej.  
+
+📌 **Instrukcja:**  
+1. Otwórz plik `user_management.py` i edytuj wcześniej stworzoną klasę `User`.  
+2. Dodaj metodę `__str__`, aby `print(user)` zwracało:  
+   ```
+   "Profil użytkownika: {username} ({email})"
+   ```  
+3. Przetestuj działanie `print(user1)` i `print(user2)`.  
+
+> **⭐ Podpowiedź:** Metoda `__str__` powinna zwracać wartość (`return`), a nie ją wypisywać (`print`).  
+
+📌 **Przykładowe wywołanie:**  
+```python
+print(user1)  # Oczekiwany wynik: "Profil użytkownika: jan_kowalski (jan@example.com)"
+print(user2)  # Oczekiwany wynik: "Profil użytkownika: anna_nowak (anna@example.com)"
+```  
 
 
 &nbsp;

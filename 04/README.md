@@ -4,7 +4,29 @@
 
 # `#04` Python: Programowanie obiektowe
 
-Tutaj treść
+## Dziedziczenie – System ról użytkowników
+
+Twoim zadaniem jest **stworzenie klasy `Admin`**, która dziedziczy po klasie `User` i dodaje dodatkową funkcjonalność.  
+
+📌 **Instrukcja:**  
+1. Otwórz plik `user_management.py` i edytuj wcześniej stworzoną klasę `User`.  
+2. Stwórz nową klasę `Admin`, która dziedziczy po `User`.  
+3. Dodaj do klasy `Admin` nowy atrybut `permissions`, który będzie przechowywał listę uprawnień administratora.  
+4. Utwórz obiekt `Admin`, przypisz mu nazwę użytkownika, e-mail oraz listę uprawnień.  
+5. Wypisz dane administratora oraz jego uprawnienia.  
+
+> **⭐ Podpowiedź:** Użyj `super().__init__()`, aby nie powielać kodu konstruktora z klasy `User`.  
+
+📌 **Przykładowe wywołanie:**  
+```python
+admin1 = Admin("superadmin", "admin@example.com", ["manage_users", "delete_posts", "ban_users"])
+
+print(admin1.get_info())  
+# Oczekiwany wynik: "Użytkownik: superadmin, e-mail: admin@example.com"
+
+print(admin1.permissions)  
+# Oczekiwany wynik: ["manage_users", "delete_posts", "ban_users"]
+```  
 
 
 &nbsp;
