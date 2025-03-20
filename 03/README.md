@@ -4,26 +4,37 @@
 
 # `#03` Python: Podstawy
 
+Twoim zadaniem jest stworzenie **klasy `Employee`**, reprezentującej ogólnego pracownika, oraz **klasy `Teacher`**, która będzie dziedziczyć po `Employee`. Klasa `Teacher` powinna rozszerzać funkcjonalność klasy bazowej poprzez dodatkowy atrybut i zmianę sposobu wyświetlania informacji o pracowniku.
 
-## Magiczne metody – Reprezentacja obiektu użytkownika
 
-Twoim zadaniem jest **nadpisać metodę `__str__`**, aby obiekt klasy `User` był czytelnie reprezentowany w postaci tekstowej.  
+### ✅ Wymagania
 
-📌 **Instrukcja:**  
-1. Otwórz plik `user_management.py` i edytuj wcześniej stworzoną klasę `User`.  
-2. Dodaj metodę `__str__`, aby `print(user)` zwracało:  
+1. **Zdefiniuj klasę `Employee`**, która będzie posiadać:
+   - `name` – imię i nazwisko pracownika,
+   - `position` – stanowisko.
+
+2. **Zaimplementuj metodę `describe(self)`**, która zwróci informację o pracowniku w formacie:
    ```
-   "Profil użytkownika: {username} ({email})"
-   ```  
-3. Przetestuj działanie `print(user1)` i `print(user2)`.  
+   Jan Kowalski pracuje na stanowisku Menedżer.
+   ```
 
-> **⭐ Podpowiedź:** Metoda `__str__` powinna zwracać wartość (`return`), a nie ją wypisywać (`print`).  
+3. **Zdefiniuj klasę `Teacher`, która dziedziczy po `Employee`** i dodaje nowy atrybut:
+   - `subject` – przedmiot, którego nauczyciel uczy.
 
-📌 **Przykładowe wywołanie:**  
-```python
-print(user1)  # Oczekiwany wynik: "Profil użytkownika: jan_kowalski (jan@example.com)"
-print(user2)  # Oczekiwany wynik: "Profil użytkownika: anna_nowak (anna@example.com)"
-```  
+4. **Nadpisz metodę `describe(self)` w klasie `Teacher`**, aby uwzględniała przedmiot:
+   ```
+   Anna Nowak jest nauczycielem i uczy matematyki.
+   ```
+
+5. **Stwórz obiekty `Employee` i `Teacher`, a następnie przetestuj metodę `describe()`**.
+
+
+
+### 💡 Podpowiedzi
+- Obie klasy utwórz w pliku `app.py`.
+- Zwróć uwagę, że metoda `describe()` w `Teacher` **całkowicie zastępuje** metodę z `Employee`.  
+- **Czy potrafisz wykorzystać `super()`**, aby uniknąć powielania kodu w `describe()`?
+- Możesz dodać więcej klas, np. `Doctor`, `Engineer`, które również dziedziczą po `Employee`.
 
 
 &nbsp;

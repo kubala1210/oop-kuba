@@ -4,29 +4,43 @@
 
 # `#04` Python: Programowanie obiektowe
 
-## Dziedziczenie – System ról użytkowników
+Twoim zadaniem jest stworzenie **klasy `Animal`**, reprezentującej ogólne zwierzę, oraz **klas `Dog` i `Cat`**, które będą dziedziczyć po `Animal`. Każde zwierzę powinno mieć metodę `make_sound()`, ale jej implementacja powinna zależeć od konkretnej klasy (**polimorfizm**).
 
-Twoim zadaniem jest **stworzenie klasy `Admin`**, która dziedziczy po klasie `User` i dodaje dodatkową funkcjonalność.  
 
-📌 **Instrukcja:**  
-1. Otwórz plik `user_management.py` i edytuj wcześniej stworzoną klasę `User`.  
-2. Stwórz nową klasę `Admin`, która dziedziczy po `User`.  
-3. Dodaj do klasy `Admin` nowy atrybut `permissions`, który będzie przechowywał listę uprawnień administratora.  
-4. Utwórz obiekt `Admin`, przypisz mu nazwę użytkownika, e-mail oraz listę uprawnień.  
-5. Wypisz dane administratora oraz jego uprawnienia.  
+### ✅ Wymagania
 
-> **⭐ Podpowiedź:** Użyj `super().__init__()`, aby nie powielać kodu konstruktora z klasy `User`.  
+1. **Zdefiniuj klasę `Animal`**, która będzie posiadać:
+   - `name` – imię zwierzęcia.
 
-📌 **Przykładowe wywołanie:**  
-```python
-admin1 = Admin("superadmin", "admin@example.com", ["manage_users", "delete_posts", "ban_users"])
+2. **Zaimplementuj metodę `make_sound(self)` w `Animal`**, która zwróci:
+   ```
+   Zwierzę wydaje dźwięk.
+   ```
 
-print(admin1.get_info())  
-# Oczekiwany wynik: "Użytkownik: superadmin, e-mail: admin@example.com"
+3. **Zdefiniuj klasy `Dog` i `Cat`, które dziedziczą po `Animal`**, ale każda nadpisuje metodę `make_sound()`:
+   - `Dog` powinien zwrócić:
+     ```
+     Burek szczeka: Hau! Hau!
+     ```
+   - `Cat` powinien zwrócić:
+     ```
+     Mruczek miauczy: Miau! Miau!
+     ```
 
-print(admin1.permissions)  
-# Oczekiwany wynik: ["manage_users", "delete_posts", "ban_users"]
-```  
+4. **Stwórz listę zwierząt zawierającą zarówno psy, jak i koty, a następnie iteruj po niej, wywołując metodę `make_sound()`**.
+
+
+### 💡 Podpowiedzi
+- **Polimorfizm** oznacza, że możemy wywołać `make_sound()` dla każdego obiektu `Animal`, niezależnie od tego, czy to `Dog`, `Cat`, czy inna klasa.
+- **Wszystkie klasy utwórz w pliku `app.py`**.
+- Możesz dodać dodatkową klasę, np. `Bird`, która również nadpisuje `make_sound()`.
+- Przykładowe użycie:
+  ```python
+  animals = [Dog("Burek"), Cat("Mruczek"), Dog("Reksio")]
+  
+  for animal in animals:
+      print(animal.make_sound())
+  ```
 
 
 &nbsp;

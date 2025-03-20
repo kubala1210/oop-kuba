@@ -4,25 +4,22 @@
 
 # `#02` Python: Programowanie obiektowe
 
-## Metody – System rejestracji użytkowników  
 
-Twoim zadaniem jest **dodać metodę** do klasy `User`, która zwróci informacje o użytkowniku.  
+Twoim zadaniem jest stworzenie **klasy `Book`**, która będzie reprezentować książkę. Klasa powinna umożliwiać przechowywanie podstawowych informacji o książce oraz ich czytelne wyświetlanie za pomocą **print()**.
 
-📌 **Instrukcja:**  
-1. Otwórz plik `user_management.py` i edytuj wcześniej stworzoną klasę `User`.  
-2. Dodaj metodę `get_info()`, która zwróci tekst w formacie:  
+### ✅ Wymagania
+
+1. **Zdefiniuj klasę `Book`**, która będzie posiadać:
+   - `title` – tytuł książki,
+   - `author` – autor książki,
+   - `year` – rok wydania.
+
+2. **Zaimplementuj metodę `__str__(self)`**, która zwróci czytelny opis książki w formacie:
    ```
-   "Użytkownik: {username}, e-mail: {email}"
-   ```  
-3. Wywołaj tę metodę dla wcześniej utworzonych użytkowników i wypisz wynik.  
+   "Python dla początkujących" – Jan Kowalski (2022)
+   ```
 
-> **⭐ Podpowiedź:** Metoda powinna zwracać wartość (`return`), a nie tylko ją wypisywać.  
-
-📌 **Przykładowe wywołanie:**  
-```python
-print(user1.get_info())  # Oczekiwany wynik: "Użytkownik: jan_kowalski, e-mail: jan@example.com"
-print(user2.get_info())  # Oczekiwany wynik: "Użytkownik: anna_nowak, e-mail: anna@example.com"
-```  
+3. **Stwórz kilka obiektów klasy `Book`** i wyświetl ich opisy za pomocą funkcji `print()`.
 
 
 &nbsp;

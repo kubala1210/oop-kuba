@@ -4,28 +4,34 @@
 
 # `#01` Python: Programowanie obiektowe
 
+Twoim zadaniem jest stworzenie **klasy `Person`**, która będzie reprezentować osobę. Klasa ta powinna umożliwiać przechowywanie podstawowych informacji o osobie oraz wyświetlanie ich w czytelny sposób.  
 
-## Klasy i obiekty – System zarządzania użytkownikami  
 
-Twoim zadaniem jest **stworzenie klasy**, która będzie reprezentowała użytkownika systemu.  
+### **✅ Wymagania**
+1. **Zdefiniuj klasę `Person`**, która będzie miała:
+   - Atrybut `name` – imię osoby,
+   - Atrybut `age` – wiek osoby,
+   - Atrybut `city` – miasto, w którym mieszka.
+   
+2. **Zaimplementuj metodę `introduce(self)`**, która będzie wypisywać informacje o osobie w formacie:
+   ```
+   Cześć, mam na imię Jan, mam 25 lat i mieszkam w Warszawie.
+   ```
+   
+3. **Stwórz trzy obiekty klasy `Person`** i wywołaj dla nich metodę `introduce()`.
 
-📌 **Instrukcja:**  
-1. Stwórz nowy plik `user_management.py`.  
-2. Zdefiniuj klasę `User` z dwoma atrybutami:  
-   - `username` (nazwa użytkownika),  
-   - `email` (adres e-mail).  
-3. Utwórz dwa obiekty klasy `User` z różnymi danymi i wypisz ich atrybuty.  
 
-> **⭐ Podpowiedź:** Pamiętaj, że obiekty klasy `User` powinny być tworzone za pomocą konstruktora `__init__()`.  
+### **📌 Efekt końcowy**
+Po uruchomieniu programu powinieneś zobaczyć coś takiego:
 
-📌 **Przykładowe wywołanie:**  
-```python
-user1 = User("jan_kowalski", "jan@example.com")
-user2 = User("anna_nowak", "anna@example.com")
+```
+Cześć, mam na imię Jan, mam 25 lat i mieszkam w Warszawie.
+Cześć, mam na imię Anna, mam 30 lat i mieszkam w Krakowie.
+Cześć, mam na imię Piotr, mam 35 lat i mieszkam w Gdańsku.
+```
 
-print(user1.username, user1.email)  # Oczekiwany wynik: jan_kowalski jan@example.com
-print(user2.username, user2.email)  # Oczekiwany wynik: anna_nowak anna@example.com
-```  
+**Powodzenia! 🚀**
+
 
 
 &nbsp;

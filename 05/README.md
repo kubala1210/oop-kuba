@@ -4,35 +4,37 @@
 
 # `#05` Python: Programowanie obiektowe
 
-## Polimorfizm – Logowanie użytkowników 
+Twoim zadaniem jest stworzenie **klasy `BankAccount`**, która będzie reprezentować konto bankowe. Klasa ta powinna wykorzystywać **enkapsulację**, aby chronić saldo konta przed bezpośrednią modyfikacją.
 
-Twoim zadaniem jest **nadpisać metodę `login()`**, aby różne typy użytkowników miały odmienne komunikaty logowania.  
+### ✅ Wymagania
 
-📌 **Instrukcja:**  
-1. Otwórz plik `user_management.py` i edytuj klasy `User` oraz `Admin`.  
-2. Dodaj metodę `login()` do klasy `User`, która zwróci tekst:  
-   ```
-   "Zalogowano użytkownika: {username}"
-   ```  
-3. Nadpisz metodę `login()` w klasie `Admin`, aby zwracała:  
-   ```
-   "Zalogowano administratora: {username}"
-   ```  
-4. Napisz funkcję `authenticate_user(user)`, która przyjmie obiekt i wywoła jego metodę `login()`.  
+1. **Zdefiniuj klasę `BankAccount`**, która będzie posiadać:
+   - `owner` – nazwisko właściciela konta,
+   - `__balance` – prywatny atrybut przechowujący saldo konta (nie powinien być dostępny bezpośrednio).
 
-> **⭐ Podpowiedź:** Upewnij się, że `authenticate_user()` działa zarówno dla `User`, jak i `Admin`.  
+2. **Zaimplementuj metodę `deposit(self, amount)`**, która pozwoli na wpłatę środków, ale tylko jeśli kwota jest dodatnia.
 
-📌 **Przykładowe wywołanie:**  
-```python
-user1 = User("jan_kowalski", "jan@example.com")
-admin1 = Admin("superadmin", "admin@example.com", ["manage_users"])
+3. **Zaimplementuj metodę `withdraw(self, amount)`**, która pozwoli na wypłatę środków, ale tylko jeśli na koncie jest wystarczająca ilość pieniędzy.
 
-print(authenticate_user(user1))  # Oczekiwany wynik: "Zalogowano użytkownika: jan_kowalski"
-print(authenticate_user(admin1))  # Oczekiwany wynik: "Zalogowano administratora: superadmin"
-```  
+4. **Zaimplementuj metodę `get_balance(self)`, która zwróci aktualne saldo konta**.
 
+5. **Stwórz obiekt `BankAccount`, wykonaj kilka operacji wpłat i wypłat, a następnie sprawdź saldo**.
+
+
+### 💡 Podpowiedzi
+- Atrybut `__balance` powinien być **prywatny**, co oznacza, że nie można go odczytać bezpośrednio.
+- **Użyj metod `deposit()` i `withdraw()`**, aby zapewnić kontrolę nad operacjami finansowymi.
+- **Nie pozwól na wpłatę ujemnej kwoty ani na wypłatę większej niż dostępne saldo**.
+- Przykładowe użycie:
+  ```python
+  account = BankAccount("Jan Kowalski", 1000)
+
+  account.deposit(500)
+  account.withdraw(200)
+  print(account.get_balance())  # 1300
+  ```
 
 &nbsp;
 > :no_entry: *Jeśli nie posiadasz materiałów do tego zadania tj. **PDF, projekt + Code Review**, znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/workshop-python-oop)*
 
-> :arrow_left: [*poprzednie zadanie*](./../04) | [*następne zadanie*](./../06) :arrow_right:
+> :arrow_left: [*poprzednie zadanie*](./../05) | ~~*następne zadanie*~~ :arrow_right:
