@@ -4,7 +4,7 @@ class Employee:
         self.name = name
         self.position = position
 
-    def describe(self):
+    def __str__(self):
         return f"{self.name} pracuje na stanowisku {self.position}"
 
 
@@ -14,8 +14,8 @@ class Teacher(Employee):
         super().__init__(name, position)
         self.subject = subject
 
-    def describe(self):
-        return f"{super().describe()} i uczy {self.subject}"
+    def __str__(self):
+        return f"{super().__str__()} i uczy {self.subject}"
 
 
 class Doctor(Employee):
@@ -24,8 +24,8 @@ class Doctor(Employee):
         super().__init__(name, position)
         self.specialization = specialization
 
-    def describe(self):
-        return f"{super().describe()} i specjalizuje się w {self.specialization}"
+    def __str__(self):
+        return f"{super().__str__()} i specjalizuje się w {self.specialization}"
 
 
 class Engineer(Employee):
@@ -34,8 +34,8 @@ class Engineer(Employee):
         super().__init__(name, position)
         self.building_spec = building_spec
 
-    def describe(self):
-        return f"{super().describe()} i projektuje {self.building_spec}"
+    def __str__(self):
+        return f"{super().__str__()} i projektuje {self.building_spec}"
 
 
 employees = [
@@ -46,4 +46,4 @@ employees = [
 ]
 
 for employee in employees:
-    print(employee.describe())
+    print(employee)
