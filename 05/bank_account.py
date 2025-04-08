@@ -10,9 +10,9 @@ class BankAccount:
         else:
             print('Amount cannot be negative')
 
-    def withdraw(self, deposit):
-        if deposit <= self.__balance:
-            self.__balance -= deposit
+    def withdraw(self, amount):
+        if amount <= self.__balance:
+            self.__balance -= amount
         else:
             print("Amount cannot be higher than balance")
 
