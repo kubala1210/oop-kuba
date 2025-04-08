@@ -16,4 +16,4 @@ books = [
 ]
 
 for book in books:
-    print(book.__str__())
+    print(book)
