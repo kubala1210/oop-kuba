@@ -6,7 +6,7 @@ class Book:
         self.year = year
 
     def __str__(self):
-        return f""" "{self.title}" - {self.author} ({self.year})"""
+        return f'"{self.title}" - {self.author} ({self.year})'
 
 
 books = [
